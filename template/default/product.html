@@ -1,0 +1,46 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{content:title}-{pboot:sitetitle}</title>
+<meta name="keywords" content="{content:keywords}">
+<meta name="description" content="{content:description}">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="generator" content=""  data-variable=",cn" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+<link rel='stylesheet' href='{pboot:sitedomain}/pc/css/index.css'>
+</head>
+<body class=" nav-header">
+{include file=comm/head.html}
+<section class="met-content animsition">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9 met-cons"> {include file=comm/position.html}
+        <div class="met-showproduct-head">
+          <h1 class='met-showproduct-title'> {content:title} </h1>
+          <div class='met-showproduct-list fngallery text-center ' id="met-imgs-carousel"> {pboot:pics num=3 id={content:id}}
+            <div class='slick-slide lg-item-box' data-src="[pics:src]" data-exthumbimage="[pics:src]"> <span> <img src="[pics:src]" data-src='[pics:src]' class="img-responsive" alt="{content:title}" /> </span> </div>
+            {/pboot:pics} </div>
+        </div>
+        <div class="panel product-detail">
+          <ul class="nav nav-tabs nav-tabs-line met-showproduct-navtabs affix-nav">
+            <li class="active"> <a data-toggle="tab" href="#product-details" data-get="product-details"> 课程详情 </a> </li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane met-editor lazyload clearfix active" id="product-details"> {content:content} </div>
+          </div>
+        </div>
+        <div class="met-shownews-footer">
+          <ul class="pager pager-round">
+            <li class='previous'> <a href='{content:prelink}'> 上一篇 <span aria-hidden='true' class='hidden-xs'> ：{content:pretitle} </span> </a> </li>
+            <li class='next disabled'> <a href='{content:nextlink}'> 下一篇 <span aria-hidden='true' class='hidden-xs'> ：{content:nexttitle} </span> </a> </li>
+          </ul>
+        </div>
+      </div>
+      {include file=comm/left.html} </div>
+  </div>
+</section>
+{include file=comm/foot.html}
+</body>
+</html>

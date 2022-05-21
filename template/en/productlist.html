@@ -1,0 +1,39 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{sort:title}</title>
+<meta name="keywords" content="{sort:keywords}">
+<meta name="description" content="{sort:description}">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="generator" content=""  data-variable=",cn" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+<link rel='stylesheet' href='{pboot:sitedomain}/pc/css/index.css'>
+</head>
+<body class=" nav-header">
+{include file=comm/head.html}
+{include file=comm/list_banner.html}
+<section class="met-content animsition">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9 met-cons"> {include file=comm/position.html}
+        <div class="met-product">
+          <ul class="blocks-2 blocks-sm-2 blocks-md-3 blocks-xlg-3  met-page-ajax met-grid" id="met-grid" data-scale='0.8'>
+            {pboot:list num=12 order=sorting}
+            <li class=" shown">
+              <div class="widget widget-shadow">
+                <figure class="widget-header cover"> <a href="[list:link]"​ title="[list:title]"> <img class="cover-image" src="[list:ico]" alt="[list:title]" style='max-height:200px;'> </a> </figure>
+                <h4 class="widget-title"> <a href="[list:link]"​ title="[list:title]"> [list:title] </a> </h4>
+              </div>
+            </li>
+            {/pboot:list}
+          </ul>
+          {include file=comm/page.html} </div>
+      </div>
+      {include file=comm/left.html} </div>
+  </div>
+</section>
+{include file=comm/foot.html}
+</body>
+</html>

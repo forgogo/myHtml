@@ -1,0 +1,44 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{sort:title}</title>
+<meta name="keywords" content="{sort:keywords}">
+<meta name="description" content="{sort:description}">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="generator" content=""  data-variable=",cn" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+<link rel='stylesheet' href='{pboot:sitedomain}/pc/css/index.css'>
+</head>
+
+<body class=" nav-header">
+<!--[if lte IE 8]>
+<div class="text-center padding-top-50 padding-bottom-50 bg-blue-grey-100">
+<p class="browserupgrade font-size-18">你正在使用一个<strong>过时</strong>的浏览器。请<a href="#">升级您的浏览器</a>，以提高您的体验。</p></div>
+<![endif]--> 
+{include file=comm/head.html}
+   {include file=comm/list_banner.html}
+<section class="met-content animsition">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9 met-cons"> {include file=comm/position.html}
+        <div class="met-news-list news-lists">
+          <ul class="met-page-ajax" data-scale=''>
+            {pboot:list num=10 order=sorting}
+            <li> <a class="img" href="[list:link]" title="[list:title]"> <img src="[list:ico]" alt="[list:title]"> </a>
+              <h4> <a href="[list:link]"​ title="[list:title]"> [list:title] </a> </h4>
+              <p class="info"> <span><i class="fa fa-calendar"></i>[list:date style=Y-m-d]</span> <span><i class="fa fa-pencil-square"></i> [list:author]</span> <span><i class="icon wb-eye"></i>[list:visits]</span> </p>
+              <p class="des"> [list:description lencn=60] </p>
+              <p class="more"> <a href="[list:link]"​ title="[list:title]"> 阅读更多>> </a> </p>
+            </li>
+            {/pboot:list}
+          </ul>
+          {include file=comm/page.html} </div>
+      </div>
+      {include file=comm/left.html} </div>
+  </div>
+</section>
+{include file=comm/foot.html}
+</body>
+</html>

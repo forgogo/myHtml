@@ -1,0 +1,114 @@
+<!-- <header class="">
+  <div class="head-box">
+    <div class="container">
+      <div class="head-left">
+        <div class="head-left-wrapper">
+          <div class="head-left-slide">
+            <p> {label:top}，微信号：{label:wx}</p>
+            <font>
+            <hr>
+            <a id="met-weixins"> <i class="fa fa-weixin" data-plugin="webuiPopover" data-trigger="hover" data-animation="pop" data-placement='bottom' data-width='130' data-padding='0' data-content="<img src='{pboot:companyweixin}' alt='{pboot:companyname} ' style='width: 120px;display:block;margin:auto;'>"> </i> </a>
+            <hr>
+            <a href="http://wpa.qq.com/msgrd?v=3&uin={pboot:companyqq}&site=qq&menu=yes"  target="_blank" rel="nofollow"> <i class="fa fa-qq"> </i> </a>
+            </font> </div>
+        </div>
+      </div>
+      <div class="head-right">
+        <div class="head-other"> <b> 更多关注 <i class="caret"> </i> </b> <span> <a class="bookmark" data-alert="加入收藏失败，请使用Ctrl+D进行添加"> <i class="fa fa-bookmark"> </i> 收藏本站 </a>
+          <hr />
+          {pboot:sort scode=10}<a href="[sort:link]" title="[sort:name]"> <i class="fa fa-book"> </i> [sort:name] </a> {/pboot:sort}</span> </div>
+      </div>
+    </div>
+  </div>
+</header> -->
+<nav class="navbar navbar-default met-nav" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button
+        type="button"
+        class="navbar-toggle hamburger hamburger-close collapsed"
+        data-target="#navbar-default-collapse"
+        data-toggle="collapse"
+      >
+        <span class="sr-only"> Toggle navigation </span>
+        <span class="hamburger-bar"> </span>
+      </button>
+      <a
+        href="{pboot:sitedomain}/"
+        class="navbar-brand navbar-logo vertical-align"
+        title="{pboot:companyname} "
+      >
+        <h1 class="hide">{pboot:companyname}</h1>
+        <div class="vertical-align-middle">
+          <img
+            src="{pboot:sitelogo}"
+            alt="{pboot:companyname} "
+            title="{pboot:companyname}"
+          />
+        </div>
+      </a>
+      <h2 class="hide"></h2>
+    </div>
+    <div
+      class="collapse navbar-collapse navbar-collapse-toolbar"
+      id="navbar-default-collapse"
+    >
+      <!-- <div class="navbar-right search-box">
+        <div class="search-button"><i class="wb-search"> </i></div>
+        <div class="search-form">
+          <form action="{pboot:scaction}" method="get">
+            <input
+              type="text"
+              placeholder="请输入搜索关键词！"
+              name="keyword"
+              value=""
+            />
+            <button type="submit" class="wb-search"></button>
+          </form>
+        </div>
+      </div> -->
+      <ul class="nav navbar-nav navbar-right navlist">
+        <!-- <li class="margin-right-20"> <a href="{pboot:sitedomain}/" title="首页" class="link active"> 首页 </a> </li> -->
+        {pboot:nav num=15 parent=0}
+        <li class="dropdown margin-right-20">
+          <a
+            data-toggle="dropdown"
+            data-hover="dropdown"
+            aria-expanded="false"
+            class="dropdown-toggle link"
+            href="[nav:link]"
+          >
+            [nav:name] {pboot:if([nav:soncount]>0)}
+            <span class="caret"> </span>
+            {/pboot:if}
+          </a>
+          {pboot:if([nav:soncount]>0)}
+          <ul class="dropdown-menu dropdown-menu-right bullet">
+            {pboot:2nav num=10 parent=[nav:scode]}
+            <li><a href="[2nav:link]" class=""> [2nav:name] </a></li>
+            {/pboot:2nav}
+          </ul>
+          {/pboot:if}
+        </li>
+        {/pboot:nav}
+      </ul>
+      <a href="{pboot:lgpath}&lg=cn" style=" position: absolute;right: -10px; top: 27px;">CN</a>
+    </div>
+  </div>
+  <div class="container">
+    <div>
+      {pboot:sort scode=1}
+      <p class="aboutServeTitle">[sort:name]</p>
+      {/pboot:sort}
+    </div>
+    <div>
+      <ul class=" navbar-nav navbar-right navlist listItemNav" style="float: left !important;">
+        {pboot:nav num=1 parent=0} {pboot:3nav num=15 parent=1}
+        <li class="dropdown margin-right-20 listItem" style="font-weight: 900; height: 70px;">
+          <a href="[3nav:link]" class=""> [3nav:name] </a>
+        </li>
+        {/pboot:3nav} {/pboot:nav}
+      </ul>
+    </div>
+  </div>
+</nav>

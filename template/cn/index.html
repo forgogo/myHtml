@@ -1,0 +1,300 @@
+﻿<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="generator" content="" data-variable=",cn,10001" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+  <title>{pboot:sitetitle}</title>
+  <meta name="keywords" content="{pboot:sitekeywords}">
+  <meta name="description" content="{pboot:sitedescription}">
+  <meta name="author" content="www.adminbuy.cn K86" />
+  <link rel='stylesheet' href='{pboot:sitedomain}/pc/css/index.css'>
+</head>
+
+<body class=" nav-header">
+  <!--[if lte IE 8]>
+<div class="text-center padding-top-50 padding-bottom-50 bg-blue-grey-100">
+<p class="browserupgrade font-size-18">你正在使用一个<strong>过时</strong>的浏览器。请<a href="#">升级您的浏览器</a>，以提高您的体验。</p></div>
+<![endif]-->
+  <!-- <a href="{pboot:lgpath}&lg=en">切换英文</a>
+<a href="{pboot:lgpath}&lg=cn">切换中文</a>  -->
+  {include file=comm/head.html}
+  <div class="met-banner" data-height='' style=''> {pboot:slide num=6 gid=1}
+    <div class="slick-slide"> <img class="cover-image" src="[slide:src]" alt="[slide:title]">
+      <div class="banner-text p-[slide:i]">
+        <div class='container'>
+          <div class='banner-text-con'>
+            <div>
+              <h4 class="animation-slide-top" style='color:#eeeeee'> [slide:title] </h4>
+              <p class="animation-slide-bottom animation-delay-300"> [slide:subtitle] </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {/pboot:slide} </div>
+  <div class="service-background">
+    <div class="container">
+      {pboot:sort scode=21}
+      <div class="title-box" >
+        <h2> 关于我们</h2>
+        {pboot:content id=45}
+        <p>[content:content drophtml=1 len=280]</p>
+        {/pboot:content}
+      </div>
+      {/pboot:sort}
+
+
+      <div class="row">
+        
+        <div class="service-box">
+          <ul class="service-wraper">
+            {pboot:nav num=16 parent=1}
+            <li class="service-slide1"> <a href="[nav:link]" title="[nav:name]"> <b>
+                  <img src="[nav:ico]">
+                  <!-- <img class="icon" src="[nav:ico]"> -->
+                  <h3> [nav:name] <span>></span></h3>
+                  <div class="fadeInUpBig" style="height: 100%; position: relative;" >
+                  <p>
+                  <span style="    font-size: 35px;
+                  font-weight: 200;
+                  display: block;
+                  margin-top: 58px;
+                  margin-left: 19px;
+                  text-align: left;
+                  color: #000;">[nav:name]</span>
+                  <span style="    font-size: 20px;
+                  font-weight: 200;
+                  padding: 0 19px;
+                  height: 280px;
+                  display: block;
+                  color: #000;
+                  text-align: left;
+              "> [nav:description]</span>
+                  <span style="display: block;
+                  color: #CF1F38;
+                  font-size: 20px;
+                  text-align: right;
+                  padding: 0 20px;
+              ">了解更多></span>
+                    
+                    
+                  
+                  
+                  </p>
+                </div>
+                </b>
+               
+           
+              </a> </li>
+            {/pboot:nav}
+          </ul>
+        </div>
+
+      </div>
+
+
+
+    </div>
+  </div>
+  {pboot:content id=1}
+  <div class="about-background">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="about-title title-box" >
+            <h2> [content:title] </h2>
+          </div>
+          <div class="about-box">
+            [content:content drophtml=1 len=280]
+          </div>
+          <div class="about-link"> <a href="[content:link]" title="关于我们"> 查看更多 <i class="fa fa-angle-double-right"> </i>
+            </a> </div>
+        </div>
+        <div class="col-md-6 about-video">
+          <video src="{label:video}" autoplay controls loop width="100%"> </video>
+        </div>
+      </div>
+    </div>
+  </div>
+  {/pboot:content}
+  <div class="product-background">
+    <div class="container">
+      <div class="title-box">
+        <h2> {pboot:sort scode=17}[sort:name]{/pboot:sort} </h2>
+        <p> </p>
+      </div>
+      <div class="row">
+        <div class="product-box">
+          <ul class="product-wraper">
+            {pboot:list scode=17 num=8 order=sorting}
+            <li class="product-slide"> <a href="[list:link]" title="[list:title]"> <span> <img
+                    data-original="[list:ico]" alt="[list:title]"> </span>
+                <h4> [list:title] </h4>
+              </a> </li>
+            {/pboot:list}
+          </ul>
+        </div>
+        <div class="product-link"> {pboot:sort scode=17} <a href="[sort:link]"> 查看更多 <i
+              class="fa fa-angle-double-right"> </i> </a>{/pboot:sort} </div>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="case-background">
+  <div class="container">
+    <div class="title-box active">
+      <h2> {pboot:sort scode=18}[sort:name]{/pboot:sort} </h2>
+      <p> </p>
+    </div>
+    <div class="row">
+      <div class="case-box">
+        <ul class="case-wraper">
+          {pboot:list scode=18 num=10 order=sorting}
+          <li class="case-slide"> <a href="[list:link]" title="[list:title]"> <span> <img data-original="[list:ico]" alt="[list:title]"> </span>
+            <h4> [list:title] </h4>
+            </a> </li>
+          {/pboot:list}
+        </ul>
+      </div>
+    </div>
+    <div class="about-link text-center"> {pboot:sort scode=18} <a href="[sort:link]"> 查看更多 <i class="fa fa-angle-double-right"> </i> </a>{/pboot:sort} </div>
+  </div>
+</div> -->
+  <div class="info-cut">
+    <div class="container">
+      <div class="title-box"> {pboot:sort scode=2}
+        <h2> [sort:name] </h2>
+        <p> [sort:subname] </p>
+        {/pboot:sort}
+      </div>
+      <div class="row">
+        <div class="info-box">
+          <ul class="info-wraper">
+            {pboot:nav num=5 parent=2}
+            <li class="info-slide"> <span>
+                <h3> [nav:name] </h3>
+                <a href="[nav:link]" title="查看更多">
+                  <hr>
+                  <hr>
+                  <hr>
+                </a>
+              </span>
+              <ol>
+                {pboot:list scode=[nav:scode] num=2}
+                <li>
+                  <h4> <a href="[list:link]" title="[list:title]"> [list:title] </a> </h4>
+                  <p> [list:description] </p>
+                  <b> <i> [list:date style=Y-m-d] </i> <em class="fa fa-tag"> </em> <strong></strong>[list:sortname]
+                  </b>
+                  
+                </li>
+                {/pboot:list}
+              </ol>
+            </li>
+            {/pboot:nav}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="parent-background" data-original="/skin/img/1510737030.jpg">
+  <div class="container">
+    <div class="title-box active">
+      <h2> {pboot:sort scode=19}[sort:name]{/pboot:sort} </h2>
+      <p> </p>
+    </div>
+    <div class="row">
+      <div class="parent-box">
+        <ul class="parent-wraper">
+          {pboot:list scode=19 num=3 order=sorting}
+          <li class="parent-slide"> <a href="#" title="[list:title]"> <span> <img data-original="[list:ico]" alt="[list:title]"> </span>
+            <h4> [list:title] </h4>
+            <p> [list:description] </p>
+            </a> </li>
+          {/pboot:list}
+        </ul>
+      </div>
+    </div>
+    <div class="about-link text-center"> {pboot:sort scode=19} <a href="[sort:link]" title="[sort:name]"> 查看更多 <i class="fa fa-angle-double-right"> </i> </a>{/pboot:sort} </div>
+  </div>
+</div> -->
+  <!-- <div class="feedback-box">
+  <div class="container">
+    <div class="title-box">
+      <h2> 立即报名 </h2>
+      <p> 让我们一起来分享瑜伽文化带给我们的美丽容颜、快乐心情、完美人生 </p>
+    </div>
+    <div class="feedback-cut">
+      <div class="feedback-tag"> <span> <i> 免费报名 </i> </span> <img src="picture/bm.png"> <font> 免费报名 </font> </div>
+      <div class="feedback-title"> <b> 填写表单 </b>
+        <p> ( 提示： <i> * </i> 为必填选项 ) </p>
+      </div>
+      <div class="feedback-form">
+        <form action="{pboot:msgaction}"  method="post">
+          <div class="form-group">
+            <label class="control-label ftype_input"> 您的姓名 </label>
+            <div>
+              <input name='name' class='form-control' type='text' placeholder='' required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label ftype_input"> 联系电话 </label>
+            <div>
+              <input name='tel' class='form-control' type='text' placeholder='' required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label ftype_textarea"> 备注 </label>
+            <div>
+              <textarea name='content' class='form-control' placeholder='' rows='5'></textarea>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label ftype_input"> 验证码 </label>
+            <div>
+              <input name='checkcode' class='form-control' type='text' placeholder='' />
+              <img title="点击刷新" class="codeimg" style="height:33px;float:left;margin-top:10px;" src="{pboot:checkcode}" onclick="this.src='{pboot:checkcode}?'+Math.round(Math.random()*10);" /> </div>
+          </div>
+          <div class="form-group ftype_button">
+            <label> &nbsp; </label>
+            <div>
+              <button type="submit" class="btn btn-primary btn-lg btn-block btn-squared"> 确认提交 </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+  {include file=comm/foot.html}
+</body>
+<script>
+  $("#navbar-default-collapse > ul > li:nth-child(6)>svg").hover(function(e){
+$(".expandMenuUl").css("display","block")
+
+  })
+
+$(".expandMenuClose").click(function(e){
+  console.log(e)
+  $(".expandMenuUl").css("display","none")
+
+
+})
+
+$("body > div.service-background > div > div.row > div > ul > li").hover(function(){
+  console.log(this)
+  $(this).find(".fadeInUpBig").show();
+  //  $(".fadeInUpBig").show();
+  $(this).find("p").stop(true,true).animate({bottom:"0"},500);  
+             
+},function(){
+  $(this).find(".fadeInUpBig").hide();
+  $(this).find("p").stop(true,true).animate({bottom:"-100%"},500);  
+})
+
+</script>
+</html>

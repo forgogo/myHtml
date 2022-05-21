@@ -1,0 +1,51 @@
+<div class="met-footnav">
+  <div class="container">
+    <div class="row mob-masonry"> {pboot:nav num=4 parent=0}
+      <div class="col-md-2 col-sm-3 col-xs-6 list masonry-item">
+        <h4> <a href="[nav:link]" title="[nav:name]"> [nav:name] </a> </h4>
+        {pboot:if([nav:soncount]>0)}
+        <ul>
+          {pboot:2nav num=10 parent=[nav:scode]}
+          <li> <a href="[2nav:link]" title="[2nav:name]"> [2nav:name] </a> </li>
+          {/pboot:2nav}
+        </ul>
+        {/pboot:if}
+      </div>
+      {/pboot:nav}
+      <div class="col-md-4 col-ms-12 col-xs-12 info masonry-item">
+        <div class="info-phone"> <b> 服务热线 </b> <em> <a> {pboot:companyphone} </a> </em>
+          <p> 客服服务时段：周一至周五，9:30 - 20:30，节假日休息 </p>
+          <span> <a href="http://wpa.qq.com/msgrd?v=3&uin={pboot:companyqq}&site=qq&menu=yes" target="_blank"
+              rel="nofollow"> <i class="fa fa-qq"> </i> </a> <a id="met-weixin"> <i class="fa fa-weixin"
+                data-plugin="webuiPopover" data-trigger="hover" data-animation="pop" data-placement='top'
+                data-width='160' data-padding='0'
+                data-content="<img src='{pboot:companyweixin}' alt='微信' style='width: 150px;height:150px;display:block;margin:auto;'>">
+              </i> </a> </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="met-links text-center">
+  <div class="container">
+    <ol class="breadcrumb">
+      <li> 友情链接 : </li>
+      {pboot:link num=50 gid=1}
+      <!-- <li><a href='[link:link]' target='_blank'>[link:name]</a></li> -->
+      {/pboot:link}
+    </ol>
+  </div>
+</div>
+<footer>
+  <div class="container text-center">
+    <div class="powered_by_pb2345"> {pboot:sitecopyright}
+       <!-- <a href="https://beian.miit.gov.cn/" target="_blank"
+        rel="nofollow">{pboot:siteicp}</a>
+         <a href="{pboot:sitedomain}/sitemap.xml" target="_blank">XML地图</a>
+      {pboot:sitestatistical} <a href="https://www.adminbuy.cn/" target="_blank">网站模板</a> -->
+    </div>
+  </div>
+</footer>
+<button type="button" class="btn btn-icon btn-primary btn-squared met-scroll-top hide"> <i class="icon wb-chevron-up"
+    aria-hidden="true"> </i> </button>
+<script src="{pboot:sitedomain}/pc/js/index.js"></script>
