@@ -227,11 +227,13 @@
                   color: #000;
                   text-align: left;
               "> [nav:description]</span>
-                  <span style="display: block;
+                  <span class="serviceReadMore" style="display: block;
                   color: #CF1F38;
                   font-size: 20px;
                   text-align: right;
                   padding: 0 20px;
+                  left: 0;
+    position: absolute;
               ">了解更多></span>
                     
                     
@@ -528,10 +530,12 @@ $("body > div.service-background > div > div.row > div > ul > li").hover(functio
   $(this).find(".fadeInUpBig").show();
   //  $(".fadeInUpBig").show();
   $(this).find("p").stop(true,true).animate({bottom:"0"},500);  
+  $(this).find(".serviceReadMore").animate({left:'200px'});
              
 },function(){
   $(this).find(".fadeInUpBig").hide();
   $(this).find("p").stop(true,true).animate({bottom:"-100%"},500);  
+  $(this).find(".serviceReadMore").animate({left:'0'});
 })
 
 </script>
